@@ -17,7 +17,7 @@ public class GeoLocationController {
 	@ResponseBody
 	public String getIp() {
 		HttpServletRequest request = ((ServletRequestAttributes) RequestContextHolder.getRequestAttributes()).getRequest();
-		return "IP : "+request.getRemoteAddr() + "     " + GeoIPv4.getLocation(request.getRemoteAddr());
+		return "IP : "+request.getRemoteAddr() + "     " + GeoIPv4.getLocation(request.getRemoteAddr().toString());
 	}
 	
 //	@GetMapping("/")

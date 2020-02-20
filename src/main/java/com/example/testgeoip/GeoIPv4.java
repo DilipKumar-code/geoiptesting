@@ -21,13 +21,13 @@ public class GeoIPv4 {
         }
     }
 
-//    public static GeoLocation getLocation(String ipAddress) {
-//        return GeoLocation.map(lookUp.getLocation(ipAddress));
-//    }
-    
-    public static String getLocation(String ipAddress) {
-        return lookUp.getLocation(ipAddress).countryName;
+    public static GeoLocation getLocation(String ipAddress) {
+        return GeoLocation.map(lookUp.getLocation(ipAddress));
     }
+    
+//    public static String getLocation(String ipAddress) {
+//        return lookUp.getLocation(ipAddress).countryName;
+//    }
 
     public static GeoLocation getLocation(long ipAddress){
         return GeoLocation.map(lookUp.getLocation(ipAddress));
